@@ -23,7 +23,7 @@ test.describe('Playlist App - Functional Tests', () => {
   test('Search shows no results for non-existing track', async ({ page }) => {
     const searchInput = page.getByLabel('Search');
     await searchInput.fill('Non-existing music');
-    
+
     // Перевіряємо, що в списку треків 0 елементів
     const tracks = page.locator('#tracklist .MuiGrid-container');
     await expect(tracks).toHaveCount(0);
