@@ -18,6 +18,8 @@ This project contains automated UI tests for the [Playlist App](https://vite-rea
 
 1. Clone the repository to your local machine.
 2. Install all necessary dependencies using the command: `npm install`
+3. Create a `.env` file in the root directory and add the base URL:
+   `BASE_URL=https://vite-react-alpha-lemon.vercel.app/`
 
 ## Running Tests
 
