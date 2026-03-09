@@ -11,6 +11,7 @@ test.describe('Playlist App - Functional Tests', () => {
     await page.goto('/');
   });
 
+  // TECHNIQUE: Equivalence Partitioning (Valid Class)
   test('Search functionality filters tracks', async ({ page }) => {
     const searchInput = page.getByLabel('Search');
     await searchInput.fill('Summer');
@@ -19,7 +20,8 @@ test.describe('Playlist App - Functional Tests', () => {
     await expect(page.locator('#tracklist')).not.toContainText('Winter Winds');
   });
 
-  // НОВИЙ ТЕСТ: Перевірка, коли результатів немає
+  // Перевірка, коли результатів немає
+  // TECHNIQUE: Boundary Value Analysis (Negative Boundary)
   test('Search shows no results for non-existing track', async ({ page }) => {
     const searchInput = page.getByLabel('Search');
     await searchInput.fill('Non-existing music');
